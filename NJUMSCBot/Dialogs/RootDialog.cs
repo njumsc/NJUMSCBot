@@ -28,8 +28,6 @@ namespace NJUMSCBot.Dialogs
             context.Wait(MessageReceived);
         }
 
-        [LuisIntent("")]
-
         [LuisIntent("打招呼")]
         public async Task Greeting(IDialogContext context, LuisResult result)
         {
@@ -45,6 +43,24 @@ namespace NJUMSCBot.Dialogs
             await context.PostAsync(message);
             context.Wait(MessageReceived);
 
+        }
+
+        [LuisIntent("操作帮助")]
+        public async Task OperatingHelp(IDialogContext context, LuisResult result)
+        {
+            String message=StringConstants.CAN_DO;
+            await context.PostAsync(message);
+            context.Wait(MessageReceived);
+        }
+
+        [LuisIntent("询问信息")]
+        public async Task RequestInfo(IDialogContext context, LuisResult result)
+        {
+        }
+
+        [LuisIntent("询问加入俱乐部")]
+        public async Task RequestJoin(IDialogContext context, LuisResult result)
+        {
         }
     }
 }
