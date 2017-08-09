@@ -2,30 +2,49 @@
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
+using Microsoft.Bot.Builder.Luis;
+using Microsoft.Bot.Builder.Luis.Models;
+using NJUMSCBot.Configs;
+using System.Collections.Generic;
 
 namespace NJUMSCBot.Dialogs
 {
     [Serializable]
-    public class RootDialog : IDialog<object>
+    [LuisModel("204f9894-2f57-4c7d-889f-31f2df44f0f3", "ccad6263e2cd434bab371a2562823097")]
+    public class RootDialog : LuisDialog<object>
     {
-        public Task StartAsync(IDialogContext context)
+        public RootDialog()
         {
-            context.Wait(MessageReceivedAsync);
-
-            return Task.CompletedTask;
+        }
+        public RootDialog(ILuisService service) : base(service)
+        {
         }
 
-        private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<object> result)
+        [LuisIntent("")]
+        public async Task None(IDialogContext context, LuisResult result)
         {
-            var activity = await result as Activity;
+            string message = StringConstants.INTENT_UNKNOWN;
+            await context.PostAsync(message);
+            context.Wait(MessageReceived);
+        }
 
-            // calculate something for us to return
-            int length = (activity.Text ?? string.Empty).Length;
+        [LuisIntent("")]
 
-            // return our reply to the user
-            await context.PostAsync($"You sent {activity.Text} which was {length} characters");
+        [LuisIntent("打招呼")]
+        public async Task Greeting(IDialogContext context, LuisResult result)
+        {
+            IMessageActivity message = context.MakeMessage();
+            message.SuggestedActions = new SuggestedActions()
+            {
+                Actions = new List<CardAction>() {
+                new CardAction(){ Title = StringConstants.HELP, Value=StringConstants.HELP },
+                new CardAction(){ Title = StringConstants.METAINFO, Value=StringConstants.METAINFO }
+                }
+            };
+            message.Text = StringConstants.SELF_INTRODUCTION;
+            await context.PostAsync(message);
+            context.Wait(MessageReceived);
 
-            context.Wait(MessageReceivedAsync);
         }
     }
 }

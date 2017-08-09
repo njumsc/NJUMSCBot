@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
+using System.Linq;
+using System;
 
 namespace NJUMSCBot
 {
@@ -39,7 +41,8 @@ namespace NJUMSCBot
             {
                 // Handle conversation state changes, like members being added and removed
                 // Use Activity.MembersAdded and Activity.MembersRemoved and Activity.Action for info
-                // Not available in all channels
+                // Not available in all channel
+
             }
             else if (message.Type == ActivityTypes.ContactRelationUpdate)
             {
