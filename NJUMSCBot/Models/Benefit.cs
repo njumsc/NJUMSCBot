@@ -9,5 +9,11 @@ namespace NJUMSCBot.Models
     [Serializable]
     public class Benefit : Item
     {
+        static Benefit()
+        {
+            Benefits = Data.Data.Read<Benefit[]>(nameof(Benefit));
+        }
+
+        public static Benefit[] Benefits { get; private set; }
     }
 }

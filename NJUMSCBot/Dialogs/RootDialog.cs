@@ -18,11 +18,6 @@ namespace NJUMSCBot.Dialogs
     public class RootDialog : LuisDialog<object>
     {
 
-        public Department[] departments = Data.Data.Read<Department[]>(nameof(Department));
-        public ClubActivity[] activities = Data.Data.Read<ClubActivity[]>(nameof(ClubActivity));
-        public Competition[] competitions = Data.Data.Read<Competition[]>(nameof(Competition));
-        public Benefit[] benefits = Data.Data.Read<Benefit[]>(nameof(Benefit));
-
         [LuisIntent("None")]
         public async Task None(IDialogContext context, LuisResult result)
         {
@@ -55,25 +50,25 @@ namespace NJUMSCBot.Dialogs
             {
                 replied = true;
                 string department = entity.Entity;
-                await context.PostAsync(departments.FirstOrDefault(x => x.Name == department).Description ?? StringConstants.DepartmentNotExist);
+                await context.PostAsync(Department.Departments.FirstOrDefault(x => x.Name == department).Description ?? StringConstants.DepartmentNotExist);
             }
             if (result.TryFindEntity("名字::比赛", out entity))
             {
                 replied = true;
                 string competition = entity.Entity;
-                await context.PostAsync(competitions.FirstOrDefault(x => x.Name == competition).Description ?? StringConstants.CompetitionNotExist);
+                await context.PostAsync(Competition.Competitions.FirstOrDefault(x => x.Name == competition).Description ?? StringConstants.CompetitionNotExist);
             }
             if (result.TryFindEntity("名字::活动", out entity))
             {
                 replied = true;
                 string activity = entity.Entity;
-                await context.PostAsync(activities.FirstOrDefault(x => x.Name == activity).Description ?? StringConstants.ActivityNotExist);
+                await context.PostAsync(ClubActivity.Activities.FirstOrDefault(x => x.Name == activity).Description ?? StringConstants.ActivityNotExist);
             }
             if (result.TryFindEntity("名字::福利", out entity))
             {
                 replied = true;
                 string benefit = entity.Entity;
-                await context.PostAsync(benefits.FirstOrDefault(x => x.Name == benefit).Description ?? StringConstants.BenefitNotExist);
+                await context.PostAsync(Benefit.Benefits.FirstOrDefault(x => x.Name == benefit).Description ?? StringConstants.BenefitNotExist);
             }
             if (result.TryFindEntity("名字::俱乐部",out entity))
             {
@@ -91,7 +86,7 @@ namespace NJUMSCBot.Dialogs
         [LuisIntent("询问部门")]
         public async Task QueryDepartment(IDialogContext context, LuisResult result)
         {
-            context.Call(new DepartmentDialog(departments), ResumeAfter);
+            context.Call(new DepartmentDialog(), ResumeAfter);
             
         }
 

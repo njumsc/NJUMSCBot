@@ -8,5 +8,12 @@ namespace NJUMSCBot.Models
     [Serializable]
     public class Competition : Item
     {
+        static Competition()
+        {
+            Competitions = Data.Data.Read<Competition[]>(nameof(Competition));
+        }
+
+        public static Competition[] Competitions { get; private set; }
+
     }
 }

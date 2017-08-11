@@ -13,13 +13,7 @@ namespace NJUMSCBot.Dialogs
     [Serializable]
     public class DepartmentDialog : IDialog<object>
     {
-        Department[] departments;
-
-
-        public DepartmentDialog(Department[] departments)
-        {
-            this.departments = departments;
-        }
+        Department[] departments = Department.Departments;
 
 
         public async Task Reply(IDialogContext context, string text)
