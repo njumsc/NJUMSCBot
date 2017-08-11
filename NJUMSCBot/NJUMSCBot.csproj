@@ -143,6 +143,7 @@
     <Content Include="Resources\Department.json" />
     <Content Include="Resources\StringConstants.json" />
     <Content Include="Resources\Metainfo.json" />
+    <None Include="Properties\PublishProfiles\NJUMSCBot - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
