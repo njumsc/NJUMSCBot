@@ -7,8 +7,9 @@ using Microsoft.Bot.Builder.Luis.Models;
 using System.Collections.Generic;
 using System.Linq;
 using NJUMSCBot.Models;
-using NJUMSCBot.Data;
 using System.Threading;
+using Newtonsoft.Json;
+using static NJUMSCBot.Data.Data;
 
 namespace NJUMSCBot.Dialogs
 {
@@ -21,8 +22,8 @@ namespace NJUMSCBot.Dialogs
         [LuisIntent("None")]
         public async Task None(IDialogContext context, LuisResult result)
         {
-            string message = StringConstants.UnknownIntent;
-            await context.PostAsync(message);
+            string message = Constants.UnknownIntent;
+            await Reply(context, message);
             context.Wait(MessageReceived);
         }
 
@@ -36,7 +37,7 @@ namespace NJUMSCBot.Dialogs
         [LuisIntent("操作帮助")]
         public async Task Help(IDialogContext context, LuisResult result)
         {
-            await context.PostAsync(StringConstants.Help);
+            await Reply(context, Constants.Help);
             context.Wait(MessageReceived);
 
         }
@@ -50,35 +51,35 @@ namespace NJUMSCBot.Dialogs
             {
                 replied = true;
                 string department = entity.Entity;
-                await context.PostAsync(Department.Departments.FirstOrDefault(x => x.Name == department).Description ?? StringConstants.DepartmentNotExist);
+                await Reply(context, DepartmentInfo.Items.FirstOrDefault(x => x.Name == department).Description ?? DepartmentInfo.NotExist);
             }
             if (result.TryFindEntity("名字::比赛", out entity))
             {
                 replied = true;
                 string competition = entity.Entity;
-                await context.PostAsync(Competition.Competitions.FirstOrDefault(x => x.Name == competition).Description ?? StringConstants.CompetitionNotExist);
+                await Reply(context, CompetitionInfo.Items.FirstOrDefault(x => x.Name == competition).Description ?? CompetitionInfo.NotExist);
             }
             if (result.TryFindEntity("名字::活动", out entity))
             {
                 replied = true;
                 string activity = entity.Entity;
-                await context.PostAsync(ClubActivity.Activities.FirstOrDefault(x => x.Name == activity).Description ?? StringConstants.ActivityNotExist);
+                await Reply(context, ActivityInfo.Items.FirstOrDefault(x => x.Name == activity).Description ?? ActivityInfo.NotExist);
             }
             if (result.TryFindEntity("名字::福利", out entity))
             {
                 replied = true;
                 string benefit = entity.Entity;
-                await context.PostAsync(Benefit.Benefits.FirstOrDefault(x => x.Name == benefit).Description ?? StringConstants.BenefitNotExist);
+                await Reply(context, BenefitInfo.Items.FirstOrDefault(x => x.Name == benefit).Description ?? BenefitInfo.NotExist);
             }
             if (result.TryFindEntity("名字::俱乐部",out entity))
             {
                 replied = true;
-                await context.PostAsync(ClubIntroduction.Introduction);
+                await Reply(context, ClubIntro.ToString());
             }
 
             if (!replied)
             {
-                await context.PostAsync($"啊你想问什么……请重新输入一下问题，谢谢！");
+                await Reply(context, Constants.UnknownIntent);
             }
             context.Wait(MessageReceived);
         }
@@ -86,27 +87,63 @@ namespace NJUMSCBot.Dialogs
         [LuisIntent("询问部门")]
         public async Task QueryDepartment(IDialogContext context, LuisResult result)
         {
-            context.Call(new DepartmentDialog(), ResumeAfter);
+            context.Call(new InfoDialog<Department>(DepartmentInfo), QueryDialogResumeAfter);
             
         }
 
-        public async Task ResumeAfter(IDialogContext context, IAwaitable<object> argument)
+        public async Task QueryDialogResumeAfter(IDialogContext context, IAwaitable<object> argument)
         {
             await SendGreeting(context);
             context.Wait(MessageReceived);
         }
 
+        [LuisIntent("询问比赛")]
+        public async Task QueryCompetitions(IDialogContext context, LuisResult result)
+        {
+            context.Call(new InfoDialog<Item>(CompetitionInfo), QueryDialogResumeAfter);
+        }
+
+        [LuisIntent("询问活动")]
+        public async Task QueryActivities(IDialogContext context, LuisResult result)
+        {
+            context.Call(new InfoDialog<Item>(ActivityInfo), QueryDialogResumeAfter);
+        }
+
+        [LuisIntent("询问福利")]
+        public async Task QueryBenefits(IDialogContext context, LuisResult result)
+        {
+            context.Call(new InfoDialog<Item>(BenefitInfo), QueryDialogResumeAfter);
+        }
+
+        [LuisIntent("询问加入俱乐部")]
+        public async Task QueryJoining(IDialogContext context, LuisResult result)
+        {
+            await Reply(context, Constants.Joining);
+            context.Wait(MessageReceived);
+        }
+
+
         public async Task SendGreeting(IDialogContext context)
+        {
+            await Reply(context, Constants.Welcome);
+        }
+
+        public async Task Reply(IDialogContext context, string text)
         {
             IMessageActivity message = context.MakeMessage();
             message.SuggestedActions = new SuggestedActions()
             {
                 Actions = new List<CardAction>() {
-                new CardAction(){ Title = StringConstants.HelpPrompt, Value=StringConstants.HelpPrompt },
-                new CardAction(){ Title = StringConstants.Metainfo, Value=StringConstants.Metainfo }
+                    new CardAction(){ Title = Constants.OperationsIndexes.ClubIntroduction, Value = Constants.Operations.ClubIntroduction},
+                    new CardAction(){ Title = Constants.OperationsIndexes.Activities, Value =Constants.Operations.Activities},
+                    new CardAction(){ Title = Constants.OperationsIndexes.Benefits, Value = Constants.Operations.Benefits},
+                    new CardAction(){ Title = Constants.OperationsIndexes.Competitions, Value = Constants.Operations.Competitions},
+                    new CardAction(){ Title = Constants.OperationsIndexes.Departments, Value = Constants.Operations.Departments},
+                    new CardAction(){ Title = Constants.OperationsIndexes.Joining, Value = Constants.Operations.Joining},
+                    new CardAction(){ Title = Constants.OperationsIndexes.Help, Value = Constants.Operations.Help},
                 }
             };
-            message.Text = StringConstants.Welcome;
+            message.Text = text;
             await context.PostAsync(message);
         }
 

@@ -112,19 +112,18 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Data\Data.cs" />
-    <Compile Include="Dialogs\DepartmentDialog.cs" />
-    <Compile Include="Models\Benefit.cs" />
-    <Compile Include="Models\ClubActivity.cs" />
+    <Compile Include="Dialogs\InfoDialog.cs" />
     <Compile Include="Models\ClubIntroduction.cs" />
-    <Compile Include="Models\Competition.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Dialogs\RootDialog.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Info.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Metainfo.cs" />
+    <Compile Include="Models\Operations.cs" />
     <Compile Include="Models\StringConstants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -137,13 +136,14 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Resources\Benefit.json" />
-    <Content Include="Resources\ClubActivity.json" />
-    <Content Include="Resources\Competition.json" />
-    <Content Include="Resources\Department.json" />
+    <Content Include="Resources\BenefitInfo.json" />
+    <Content Include="Resources\ClubActivityInfo.json" />
+    <Content Include="Resources\CompetitionInfo.json" />
+    <Content Include="Resources\DepartmentInfo.json" />
     <Content Include="Resources\StringConstants.json" />
     <Content Include="Resources\Metainfo.json" />
     <None Include="Properties\PublishProfiles\NJUMSCBot - Web Deploy.pubxml" />
+    <Content Include="Resources\ClubIntroduction.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -155,6 +155,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

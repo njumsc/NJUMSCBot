@@ -1,27 +1,33 @@
 ﻿using Microsoft.Bot.Builder.Dialogs;
+using Microsoft.Bot.Connector;
+using NJUMSCBot.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Threading.Tasks;
-using Microsoft.Bot.Connector;
-using NJUMSCBot.Models;
-using NJUMSCBot.Data;
+using System.Web;
+using static NJUMSCBot.Data.Data;
 
 namespace NJUMSCBot.Dialogs
 {
     [Serializable]
-    public class DepartmentDialog : IDialog<object>
+    public class InfoDialog<T> : IDialog<object> where T:Item
     {
-        Department[] departments = Department.Departments;
+        Info<T> info;
+        T[] items;
 
+        public InfoDialog(Info<T> info )
+        {
+            this.info = info;
+            this.items = info.Items;
+        }
 
         public async Task Reply(IDialogContext context, string text)
         {
             var reply = context.MakeMessage();
             List<CardAction> actions = new List<CardAction>();
 
-            actions.AddRange(departments.Select(x => new CardAction()
+            actions.AddRange(items.Select(x => new CardAction()
             {
                 Value = x.Name,
                 Title = x.Name
@@ -47,8 +53,8 @@ namespace NJUMSCBot.Dialogs
         public async Task StartAsync(IDialogContext context)
         {
 
-            await Reply(context, StringConstants.DepartmentIntroduction);
-           
+            await Reply(context, info.Introduction);
+
             context.Wait(AfterEnterDepartmentName);
         }
 
@@ -59,7 +65,7 @@ namespace NJUMSCBot.Dialogs
 
             if (message == "全部")
             {
-                foreach (Department d in departments)
+                foreach (T d in items)
                 {
                     await Reply(context, d.Description);
                 }
@@ -74,7 +80,7 @@ namespace NJUMSCBot.Dialogs
             }
 
             bool output = false;
-            foreach (Department d in departments)
+            foreach (T d in items)
             {
                 if (message.Contains(d.Name))
                 {
@@ -84,7 +90,7 @@ namespace NJUMSCBot.Dialogs
             }
             if (!output)
             {
-                await Reply(context, StringConstants.DepartmentNotExist);
+                await Reply(context, info.NotExist);
             }
             context.Wait(AfterEnterDepartmentName);
         }

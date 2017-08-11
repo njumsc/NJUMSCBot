@@ -61,64 +61,112 @@ namespace NJUMSCBot.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [
-        ///  {
-        ///    &quot;name&quot;: &quot;&quot;,
-        ///    &quot;description&quot;: &quot;&quot;,
-        ///    &quot;readMoreUrl&quot;: &quot;&quot; 
-        ///  }
-        ///].
+        ///   Looks up a localized string similar to {
+        ///  &quot;introduction&quot;: &quot;俱乐部会对组员提供很多福利。&quot;,
+        ///  &quot;notExist&quot;: &quot;我们好像没有这个福利……&quot;,
+        ///  &quot;items&quot;: [
+        ///    {
+        ///      &quot;name&quot;: &quot;“明日之星”实习生计划&quot;,
+        ///      &quot;description&quot;: &quot;微软亚洲研究院应该是所有计算机人才梦寐以求的实习/工作机会，微软学生俱乐部的优秀部员将可以通过俱乐部绿色通道，略去简历筛选过程，你的简历可以直接到达导师手中&quot;,
+        ///      &quot;readMoreUrl&quot;: &quot;http://www.msra.cn/zh-cn/connections/academic-programs/tomorrowstars&quot;
+        ///    },
+        ///    {
+        ///      &quot;name&quot;: &quot;微软“校园菁英计划”&quot;,
+        ///      &quot;description&quot;: &quot;微软校园菁英计划是针对有好的想法却缺少工具，指导和资金的大学生团队。校园菁英计划的目的不同于比赛，菁英计划希望能给尽可能多的学生项目团队支持，并且不求回报。&quot;,
+        ///      &quot;readMoreUrl&quot;: &quot;&quot;
+        ///    },
+        ///    {
+        ///      [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string Benefit {
+        internal static string BenefitInfo {
             get {
-                return ResourceManager.GetString("Benefit", resourceCulture);
+                return ResourceManager.GetString("BenefitInfo", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [
-        ///  {
-        ///    &quot;name&quot;: &quot;&quot;,
-        ///    &quot;description&quot;: &quot;&quot;,
-        ///    &quot;readMoreUrl&quot;: &quot;&quot;
-        ///  }
-        ///].
+        ///   Looks up a localized string similar to {
+        ///  &quot;introduction&quot;: &quot;我们每年会举办很多活动。&quot;,
+        ///  &quot;notExist&quot;: &quot;我们貌似没有这个活动……&quot;,
+        ///  &quot;items&quot;: [
+        ///    {
+        ///      &quot;name&quot;: &quot;技术沙龙&quot;,
+        ///      &quot;description&quot;: &quot;南京大学微软俱乐部会定期举办技术沙龙，我们将邀请高年级有声望的学长学姐与大家分享一些大家感兴趣的技术问题，并以讲座+互动的形式举行。去年举办过的部分讲座有：机器学习基础，Microsoft Cognitive Service，如何科学上网（翻墙），C#基础，STL的使用等。&quot;,
+        ///      &quot;readMoreUrl&quot;: &quot;&quot;
+        ///    },
+        ///    {
+        ///      &quot;name&quot;: &quot;微软校园行&quot;,
+        ///      &quot;description&quot;: &quot;微软亚洲研究院副院长芮勇博士亲自来校举办讲座的活动，每次的主题都是最前沿的技术，但是讲的生动有趣，每年都是爆满，作为南大微软俱乐部的成员，可以有VIP座位并且亲自和芮勇博士交流的机会。&quot;,
+        ///      &quot;readMoreUrl&quot;: &quot;&quot;
+        ///    }
+        ///  ]
+        ///}.
         /// </summary>
-        internal static string ClubActivity {
+        internal static string ClubActivityInfo {
             get {
-                return ResourceManager.GetString("ClubActivity", resourceCulture);
+                return ResourceManager.GetString("ClubActivityInfo", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [
-        ///  {
-        ///    &quot;name&quot;: &quot;&quot;,
-        ///    &quot;description&quot;: &quot;&quot;,
-        ///    &quot;readMoreUrl&quot;: &quot;&quot;
-        ///  }
-        ///].
+        ///   Looks up a localized string similar to {
+        ///  &quot;introduction&quot;: &quot;微软学生俱乐部是微软亚洲研究院(Microsoft Research Asia)下属的学生俱乐部，在全国有包括清华，北大，港科大，台大，复旦，交大，浙大，南大等32所一流高校都有各自的微软俱乐部，这里集中了中国最优秀的计算机人才，有着世界最大的IT公司微软公司和亚洲最顶级的研究院微软亚洲研究院的直接支持（均没有之一）。所有的开销和物资全部由微软亚洲研究院提供，社团完全免费，且不需要依赖外联，学校经费。我们就是壕!&quot;,
+        ///  &quot;website&quot;: &quot;http://studentclub.msra.cn/&quot;
+        ///}.
         /// </summary>
-        internal static string Competition {
+        internal static string ClubIntroduction {
             get {
-                return ResourceManager.GetString("Competition", resourceCulture);
+                return ResourceManager.GetString("ClubIntroduction", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [
-        ///  {
-        ///    &quot;name&quot;: &quot;技术部&quot;,
-        ///    &quot;description&quot;: &quot;技术部是微软俱乐部的一个重要部门，主要负责和技术有关的活动，比如举办学术讲座，做宣传海报等&quot;,
-        ///    &quot;readMoreUrl&quot;: &quot;&quot;,
-        ///    &quot;president&quot;: &quot;软院 王宁一&quot;,
-        ///    &quot;vicePresident&quot;: &quot;软院 陈俊达，物院 王臻郅&quot;
-        ///  }
-        ///].
+        ///   Looks up a localized string similar to {
+        ///  &quot;introduction&quot;: &quot;大家可以参加俱乐部以及MSRA举办的各种活动来认识大佬一起学习。&quot;,
+        ///  &quot;notExist&quot;: &quot;我们貌似没有这个比赛……&quot;,
+        ///  &quot;items&quot;: [
+        ///    {
+        ///      &quot;name&quot;: &quot;微软创新杯&quot;,
+        ///      &quot;description&quot;: &quot;全球规模最大的学生科技比赛（没有之一）每年有超过65个国家和地区的学生参与比赛。在中国已经举办了13年，有22万学生参加比赛。&quot;,
+        ///      &quot;readMoreUrl&quot;: &quot;&quot;
+        ///    },
+        ///    {
+        ///      &quot;name&quot;: &quot;微软hackathon&quot;,
+        ///      &quot;description&quot;: &quot;hackathon是来源于国外的新潮的计算机文化，它的目的是在24小时之内完成一个软件/程序的编写，供给以无限的食物，饮料，网络资源。&quot;,
+        ///      &quot;readMoreUrl&quot;: &quot;&quot;
+        ///    },
+        ///    {
+        ///      &quot;name&quot;: &quot;编程之美挑战赛&quot;,
+        ///      &quot;description&quot;: &quot;微软面向学生开展的大型编程比赛，自2012年以来已成功举办了五届比赛。它致力 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string Department {
+        internal static string CompetitionInfo {
             get {
-                return ResourceManager.GetString("Department", resourceCulture);
+                return ResourceManager.GetString("CompetitionInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;introduction&quot;: &quot;我们目前由三个部门组成，组织部，宣传部和技术部。\n输入或者选择一个部门以获取详细信息。\n或者输入 返回 以返回。&quot;,
+        ///  &quot;notExist&quot;: &quot;我们好像没有这个部门&quot;,
+        ///  &quot;items&quot;: [
+        ///    {
+        ///      &quot;name&quot;: &quot;技术部&quot;,
+        ///      &quot;description&quot;: &quot;技术部是微软俱乐部的一个重要部门，主要负责和技术有关的活动，比如举办学术讲座，做宣传海报等&quot;,
+        ///      &quot;readMoreUrl&quot;: &quot;&quot;,
+        ///      &quot;president&quot;: &quot;软院 王宁一&quot;,
+        ///      &quot;vicePresident&quot;: &quot;软院 陈俊达，物院 王臻郅&quot;
+        ///    },
+        ///    {
+        ///      &quot;name&quot;: &quot;活动部&quot;,
+        ///      &quot;description&quot;: &quot;活动部是微软俱乐部的一个重要部门，主要负责策划和承办各式各样的活动，比如策划新部员的破冰活动，承办南京地区hackthon大赛等&quot;,
+        ///      &quot;readMoreUrl&quot;: &quot;&quot;,
+        ///      &quot;president&quot;: &quot;计科 吴昌容&quot;,
+        ///       [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DepartmentInfo {
+            get {
+                return ResourceManager.GetString("DepartmentInfo", resourceCulture);
             }
         }
         
@@ -138,9 +186,22 @@ namespace NJUMSCBot.Properties {
         ///   Looks up a localized string similar to {
         ///  &quot;welcome&quot;: &quot;你好！我是南京大学微软学生俱乐部的机器人，你可以用自然语言询问我任何问题！&quot;,
         ///  &quot;unknownIntent&quot;: &quot;啊抱歉没听懂你在说什么……&quot;,
-        ///  &quot;help&quot;: &quot;目前，你可以用自然语言问我关于俱乐部的招新、比赛、活动、部门等信息，以后我们的还会继续增加功能！&quot;,
-        ///  &quot;metainfo&quot;: &quot;元数据&quot;
-        ///}.
+        ///  &quot;operationsIndexes&quot;: {
+        ///    &quot;clubIntroduction&quot;: &quot;俱乐部信息&quot;,
+        ///    &quot;activities&quot;: &quot;活动&quot;,
+        ///    &quot;competitions&quot;: &quot;比赛&quot;,
+        ///    &quot;departments&quot;: &quot;部门&quot;,
+        ///    &quot;benefits&quot;: &quot;福利&quot;,
+        ///    &quot;joining&quot;: &quot;招新！&quot;,
+        ///    &quot;help&quot;: &quot;我能做什么？&quot;
+        ///  },
+        ///  &quot;operations&quot;: {
+        ///    &quot;clubIntroduction&quot;: &quot;介绍下俱乐部&quot;,
+        ///    &quot;activities&quot;: &quot;俱乐部有什么活动&quot;,
+        ///    &quot;competitions&quot;: &quot;你们有什么比赛&quot;,
+        ///    &quot;departments&quot;: &quot;俱乐部有哪些部门？&quot;,
+        ///    &quot;benefits&quot;: &quot;俱乐部有哪些福利？&quot;,
+        ///    &quot;joining&quot;: &quot;怎样加入你们？&quot;, [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StringConstants {
             get {

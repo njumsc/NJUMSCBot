@@ -9,31 +9,17 @@ namespace NJUMSCBot.Models
     [Serializable]
     public class StringConstants
     {
-        static StringConstants()
-        {
-            Data.Data.Read<StringConstants>(nameof(StringConstants));
-        }
+        public string Welcome { get; set; }
+        public Operations OperationsIndexes { get; set; }
+        public Operations Operations { get; set; }
 
-        [JsonProperty]
-        public static string Welcome { get; private set; }
-        [JsonProperty]
-        public static string UnknownIntent { get; private set; }
-        [JsonProperty]
-        public static string Metainfo { get; private set; }
-        [JsonProperty]
-        public static string Help { get; private set; }
-        [JsonProperty]
-        public static string DepartmentNotExist { get; private set; }
-        [JsonProperty]
-        public static string HelpPrompt { get; private set; }
-        [JsonProperty]
-        public static string CompetitionNotExist { get; private set; }
-        [JsonProperty]
-        public static string ActivityNotExist { get; private set; }
-        [JsonProperty]
-        public static string BenefitNotExist { get; private set; }
-        [JsonProperty]
-        public static string DepartmentIntroduction { get; private set; }
+        public string UnknownIntent { get; set; }
+
+        public string Metainfo { get; set; }
+
+        public string Help { get; set; }
+
+        public string Joining { get; set; }
 
     }
 }

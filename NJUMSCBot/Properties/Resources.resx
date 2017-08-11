@@ -118,17 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Benefit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\benefit.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="BenefitInfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\benefitinfo.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="ClubActivity" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\clubactivity.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="ClubActivityInfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\clubactivityinfo.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="Competition" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\competition.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="ClubIntroduction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\clubintroduction.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="Department" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\department.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="CompetitionInfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\competitioninfo.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="DepartmentInfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\departmentinfo.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="Metainfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\metainfo.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>

@@ -8,13 +8,6 @@ namespace NJUMSCBot.Models
     [Serializable]
     public class Department : Item
     {
-        static Department()
-        {
-            Departments = Data.Data.Read<Department[]>(nameof(Department));
-        }
-
-        public static Department[] Departments { get; private set; }
-
         public string President { get; set; }
         public string VicePresident { get; set; }
 

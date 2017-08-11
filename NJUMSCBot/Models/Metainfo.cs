@@ -9,17 +9,10 @@ namespace NJUMSCBot.Models
     [Serializable]
     public class Metainfo
     {
-        static Metainfo()
-        {
-            Data.Data.Read<Metainfo>(nameof(Metainfo));
-        }
+        public string UpdateTime { get; set; }
+        public string Github { get; set; }
 
-        [JsonProperty]
-        public static string UpdateTime { get; set; }
-        [JsonProperty]
-        public static string Github { get; set; }
-
-        public new static string ToString()
+        public override string ToString()
         {
             return $"last updated on {UpdateTime}. Join our development on {Github}!";
         }
