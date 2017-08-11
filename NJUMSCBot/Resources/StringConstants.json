@@ -1,0 +1,12 @@
+﻿{
+  "welcome": "你好！我是南京大学微软学生俱乐部的机器人，你可以用自然语言询问我任何问题！",
+  "unknownIntent": "啊抱歉没听懂你在说什么……",
+  "helpPrompt": "你现在能做什么？",
+  "help": "目前，你可以用自然语言问我关于俱乐部的招新、比赛、活动、部门等信息，以后我们的还会继续增加功能！",
+  "metainfo": "元数据",
+  "departmentNotExist": "你所寻找的部门不存在……",
+  "competitionNotExist": "我们貌似没有这个比赛……",
+  "activityNotExist": "我们貌似没有这个活动……",
+  "benefitNotExist": "我们好像没有这个福利……",
+  "departmentIntroduction": "我们目前由三个部门组成，组织部，宣传部和技术部。\n输入或者选择一个部门以获取详细信息。\n或者输入 返回 以返回。"
+}

@@ -112,13 +112,39 @@ namespace NJUMSCBot.Properties {
         ///    &quot;description&quot;: &quot;技术部是微软俱乐部的一个重要部门，主要负责和技术有关的活动，比如举办学术讲座，做宣传海报等&quot;,
         ///    &quot;readMoreUrl&quot;: &quot;&quot;,
         ///    &quot;president&quot;: &quot;软院 王宁一&quot;,
-        ///    &quot;vicePresident&quot;: &quot;软院 陈俊达，计科 王臻郅&quot;
+        ///    &quot;vicePresident&quot;: &quot;软院 陈俊达，物院 王臻郅&quot;
         ///  }
         ///].
         /// </summary>
         internal static string Department {
             get {
                 return ResourceManager.GetString("Department", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;updatedTime&quot;: &quot;2017-8-11&quot;,
+        ///  &quot;github&quot;: &quot;https://github.com/njumsc/NJUMSCBot&quot;
+        ///}.
+        /// </summary>
+        internal static string Metainfo {
+            get {
+                return ResourceManager.GetString("Metainfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;welcome&quot;: &quot;你好！我是南京大学微软学生俱乐部的机器人，你可以用自然语言询问我任何问题！&quot;,
+        ///  &quot;unknownIntent&quot;: &quot;啊抱歉没听懂你在说什么……&quot;,
+        ///  &quot;help&quot;: &quot;目前，你可以用自然语言问我关于俱乐部的招新、比赛、活动、部门等信息，以后我们的还会继续增加功能！&quot;,
+        ///  &quot;metainfo&quot;: &quot;元数据&quot;
+        ///}.
+        /// </summary>
+        internal static string StringConstants {
+            get {
+                return ResourceManager.GetString("StringConstants", resourceCulture);
             }
         }
     }
