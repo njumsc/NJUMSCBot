@@ -118,7 +118,21 @@ namespace NJUMSCBot.Dialogs
         [LuisIntent("询问加入俱乐部")]
         public async Task QueryJoining(IDialogContext context, LuisResult result)
         {
-            await Reply(context, Constants.Joining);
+            var reply = context.MakeMessage();
+
+            var qqgroupImage = new Attachment()
+            {
+                ContentType = "image/jpg",
+                ContentUrl = ClubIntro.GroupImage
+            };
+
+            reply.Attachments = new List<Attachment>
+            {
+                qqgroupImage
+            };
+            reply.Text = Constants.Joining;
+
+            await Reply(context, reply);
             context.Wait(MessageReceived);
         }
 
@@ -130,6 +144,14 @@ namespace NJUMSCBot.Dialogs
 
         public async Task Reply(IDialogContext context, string text)
         {
+            string[] splitedText = text.Split('\n');
+
+            for(int i = 0; i < splitedText.Length - 1; i++)
+            {
+                await context.PostAsync(splitedText[i]);
+            }
+
+
             IMessageActivity message = context.MakeMessage();
             message.SuggestedActions = new SuggestedActions()
             {
@@ -143,8 +165,25 @@ namespace NJUMSCBot.Dialogs
                     new CardAction(){ Title = Constants.OperationsIndexes.Help, Value = Constants.Operations.Help},
                 }
             };
-            message.Text = text;
+            message.Text = splitedText.Last();
             await context.PostAsync(message);
+        }
+
+        public async Task Reply(IDialogContext context, IMessageActivity reply)
+        {
+            reply.SuggestedActions = new SuggestedActions()
+            {
+                Actions = new List<CardAction>() {
+                    new CardAction(){ Title = Constants.OperationsIndexes.ClubIntroduction, Value = Constants.Operations.ClubIntroduction},
+                    new CardAction(){ Title = Constants.OperationsIndexes.Activities, Value =Constants.Operations.Activities},
+                    new CardAction(){ Title = Constants.OperationsIndexes.Benefits, Value = Constants.Operations.Benefits},
+                    new CardAction(){ Title = Constants.OperationsIndexes.Competitions, Value = Constants.Operations.Competitions},
+                    new CardAction(){ Title = Constants.OperationsIndexes.Departments, Value = Constants.Operations.Departments},
+                    new CardAction(){ Title = Constants.OperationsIndexes.Joining, Value = Constants.Operations.Joining},
+                    new CardAction(){ Title = Constants.OperationsIndexes.Help, Value = Constants.Operations.Help},
+                }
+            };
+            await context.PostAsync(reply);
         }
 
     }

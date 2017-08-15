@@ -13,9 +13,11 @@ namespace NJUMSCBot.Models
 
         public string Website { get; set; }
 
+        public string GroupImage { get; set; }
+
         public override string ToString()
         {
-            return $"{Introduction}\n我们的网址是{Website}";
+            return $"{Introduction}\n我们的官网是{Website}";
         }
     }
 }

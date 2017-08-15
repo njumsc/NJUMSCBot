@@ -39,11 +39,22 @@ namespace NJUMSCBot.Dialogs
                 Title = "全部"
             });
 
+
+            if (info.Previous != null)
+            {
+                actions.Add(new CardAction()
+                {
+                    Value = "以往的",
+                    Title = "以往的活动"
+                });
+            }
+
             actions.Add(new CardAction()
             {
                 Value = "返回",
                 Title = "返回"
             });
+
 
             reply.SuggestedActions = new SuggestedActions() { Actions = actions };
             reply.Text = text;
@@ -55,11 +66,11 @@ namespace NJUMSCBot.Dialogs
 
             await Reply(context, info.Introduction);
 
-            context.Wait(AfterEnterDepartmentName);
+            context.Wait(AfterEnterFurtherInformation);
         }
 
 
-        public async Task AfterEnterDepartmentName(IDialogContext context, IAwaitable<IMessageActivity> argument)
+        public async Task AfterEnterFurtherInformation(IDialogContext context, IAwaitable<IMessageActivity> argument)
         {
             var message = (await argument).Text;
 
@@ -69,7 +80,7 @@ namespace NJUMSCBot.Dialogs
                 {
                     await Reply(context, d.Description);
                 }
-                context.Wait(AfterEnterDepartmentName);
+                context.Wait(AfterEnterFurtherInformation);
                 return;
             }
 
@@ -77,6 +88,26 @@ namespace NJUMSCBot.Dialogs
             {
                 context.Done("");
                 return;
+            }
+
+            else if (message.Contains("以往的"))
+            {
+                if (info.Previous == null)
+                {
+                    await Reply(context, "抱歉在这个主题下我们没有以往的活动。");
+                }
+                else
+                {
+                    foreach(var pair in info.Previous)
+                    {
+                        await context.PostAsync($"{pair.Key}: [点击查看微信推送]({pair.Value})");
+
+                    }
+                    await Reply(context, "那是全部了。");
+                }
+                context.Wait(AfterEnterFurtherInformation);
+                return;
+
             }
 
             bool output = false;
@@ -92,7 +123,7 @@ namespace NJUMSCBot.Dialogs
             {
                 await Reply(context, info.NotExist);
             }
-            context.Wait(AfterEnterDepartmentName);
+            context.Wait(AfterEnterFurtherInformation);
         }
     }
 }

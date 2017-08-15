@@ -67,7 +67,7 @@ namespace NJUMSCBot.Properties {
         ///  &quot;items&quot;: [
         ///    {
         ///      &quot;name&quot;: &quot;“明日之星”实习生计划&quot;,
-        ///      &quot;description&quot;: &quot;微软亚洲研究院应该是所有计算机人才梦寐以求的实习/工作机会，微软学生俱乐部的优秀部员将可以通过俱乐部绿色通道，略去简历筛选过程，你的简历可以直接到达导师手中&quot;,
+        ///      &quot;description&quot;: &quot;微软亚洲研究院应该是所有计算机人才梦寐以求的实习/工作机会，微软学生俱乐部的优秀部员将可以通过俱乐部绿色通道，略去简历筛选过程，你的简历可以直接到达导师手中。&quot;,
         ///      &quot;readMoreUrl&quot;: &quot;http://www.msra.cn/zh-cn/connections/academic-programs/tomorrowstars&quot;
         ///    },
         ///    {
@@ -76,7 +76,7 @@ namespace NJUMSCBot.Properties {
         ///      &quot;readMoreUrl&quot;: &quot;&quot;
         ///    },
         ///    {
-        ///      [rest of string was truncated]&quot;;.
+        ///     [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string BenefitInfo {
             get {
@@ -99,8 +99,8 @@ namespace NJUMSCBot.Properties {
         ///      &quot;description&quot;: &quot;微软亚洲研究院副院长芮勇博士亲自来校举办讲座的活动，每次的主题都是最前沿的技术，但是讲的生动有趣，每年都是爆满，作为南大微软俱乐部的成员，可以有VIP座位并且亲自和芮勇博士交流的机会。&quot;,
         ///      &quot;readMoreUrl&quot;: &quot;&quot;
         ///    }
-        ///  ]
-        ///}.
+        ///  ],
+        ///  &quot;previous&quot;: {        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ClubActivityInfo {
             get {
@@ -110,8 +110,9 @@ namespace NJUMSCBot.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;introduction&quot;: &quot;微软学生俱乐部是微软亚洲研究院(Microsoft Research Asia)下属的学生俱乐部，在全国有包括清华，北大，港科大，台大，复旦，交大，浙大，南大等32所一流高校都有各自的微软俱乐部，这里集中了中国最优秀的计算机人才，有着世界最大的IT公司微软公司和亚洲最顶级的研究院微软亚洲研究院的直接支持（均没有之一）。所有的开销和物资全部由微软亚洲研究院提供，社团完全免费，且不需要依赖外联，学校经费。我们就是壕!&quot;,
-        ///  &quot;website&quot;: &quot;http://studentclub.msra.cn/&quot;
+        ///  &quot;introduction&quot;: &quot;微软学生俱乐部是微软亚洲研究院(Microsoft Research Asia)下属的学生俱乐部，在全国有包括清华，北大，港科大，台大，复旦，交大，浙大，南大等32所一流高校都有各自的微软俱乐部，这里集中了中国最优秀的计算机人才，有着世界最大的IT公司微软公司和亚洲最顶级的研究院微软亚洲研究院的直接支持（均没有之一）。所有的开销和物资全部由微软亚洲研究院提供，社团完全免费，且不需要依赖外联，学校经费。我们就是壕！&quot;,
+        ///  &quot;website&quot;: &quot;http://studentclub.msra.cn/&quot;,
+        ///  &quot;qqGroupImage&quot;: &quot;&quot;
         ///}.
         /// </summary>
         internal static string ClubIntroduction {
@@ -132,12 +133,7 @@ namespace NJUMSCBot.Properties {
         ///    },
         ///    {
         ///      &quot;name&quot;: &quot;微软hackathon&quot;,
-        ///      &quot;description&quot;: &quot;hackathon是来源于国外的新潮的计算机文化，它的目的是在24小时之内完成一个软件/程序的编写，供给以无限的食物，饮料，网络资源。&quot;,
-        ///      &quot;readMoreUrl&quot;: &quot;&quot;
-        ///    },
-        ///    {
-        ///      &quot;name&quot;: &quot;编程之美挑战赛&quot;,
-        ///      &quot;description&quot;: &quot;微软面向学生开展的大型编程比赛，自2012年以来已成功举办了五届比赛。它致力 [rest of string was truncated]&quot;;.
+        ///      &quot;description&quot;: &quot;Hackathon，中文名黑客松，昵称黑马，小名松松(黑人问号？)，是一群程序猿聚众coding，以合作形式形成某个项目的活动。在Hackathon启动前会限定主题和大方向，各个团队根据这个大方向以团队形式合作coding，在限时内形成自己的项目，最后进行展示与评比。它的灵魂是合作地编写程序和应用。时长一般在几天到一周不等。\n南京大学承办了2016年的南京四校hackathon活动，详细活 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string CompetitionInfo {
             get {
@@ -147,7 +143,7 @@ namespace NJUMSCBot.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;introduction&quot;: &quot;我们目前由三个部门组成，组织部，宣传部和技术部。\n输入或者选择一个部门以获取详细信息。\n或者输入 返回 以返回。&quot;,
+        ///  &quot;introduction&quot;: &quot;我们目前由三个部门组成，组织部，宣传部和技术部。&quot;,
         ///  &quot;notExist&quot;: &quot;我们好像没有这个部门&quot;,
         ///  &quot;items&quot;: [
         ///    {
@@ -162,7 +158,8 @@ namespace NJUMSCBot.Properties {
         ///      &quot;description&quot;: &quot;活动部是微软俱乐部的一个重要部门，主要负责策划和承办各式各样的活动，比如策划新部员的破冰活动，承办南京地区hackthon大赛等&quot;,
         ///      &quot;readMoreUrl&quot;: &quot;&quot;,
         ///      &quot;president&quot;: &quot;计科 吴昌容&quot;,
-        ///       [rest of string was truncated]&quot;;.
+        ///      &quot;vicePresident&quot;: &quot;软院 高毓彬 &quot;
+        ///    }, [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string DepartmentInfo {
             get {
@@ -183,6 +180,26 @@ namespace NJUMSCBot.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap publichao {
+            get {
+                object obj = ResourceManager.GetObject("publichao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap QQgroup {
+            get {
+                object obj = ResourceManager.GetObject("QQgroup", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {
         ///  &quot;welcome&quot;: &quot;你好！我是南京大学微软学生俱乐部的机器人，你可以用自然语言询问我任何问题！&quot;,
         ///  &quot;unknownIntent&quot;: &quot;啊抱歉没听懂你在说什么……&quot;,
@@ -193,7 +210,7 @@ namespace NJUMSCBot.Properties {
         ///    &quot;departments&quot;: &quot;部门&quot;,
         ///    &quot;benefits&quot;: &quot;福利&quot;,
         ///    &quot;joining&quot;: &quot;招新！&quot;,
-        ///    &quot;help&quot;: &quot;我能做什么？&quot;
+        ///    &quot;help&quot;: &quot;帮助&quot;
         ///  },
         ///  &quot;operations&quot;: {
         ///    &quot;clubIntroduction&quot;: &quot;介绍下俱乐部&quot;,
@@ -201,7 +218,8 @@ namespace NJUMSCBot.Properties {
         ///    &quot;competitions&quot;: &quot;你们有什么比赛&quot;,
         ///    &quot;departments&quot;: &quot;俱乐部有哪些部门？&quot;,
         ///    &quot;benefits&quot;: &quot;俱乐部有哪些福利？&quot;,
-        ///    &quot;joining&quot;: &quot;怎样加入你们？&quot;, [rest of string was truncated]&quot;;.
+        ///    &quot;joining&quot;: &quot;怎样加入你们？&quot;,
+        ///   [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StringConstants {
             get {

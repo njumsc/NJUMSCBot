@@ -105,6 +105,8 @@
   <ItemGroup>
     <Content Include="default.htm" />
     <Content Include="Global.asax" />
+    <Content Include="Resources\Pictures\publichao.jpg" />
+    <Content Include="Resources\Pictures\QQgroup.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -136,14 +138,14 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Resources\BenefitInfo.json" />
-    <Content Include="Resources\ClubActivityInfo.json" />
-    <Content Include="Resources\CompetitionInfo.json" />
-    <Content Include="Resources\DepartmentInfo.json" />
+    <Content Include="Resources\Texts\BenefitInfo.json" />
+    <Content Include="Resources\Texts\ClubActivityInfo.json" />
+    <Content Include="Resources\Texts\CompetitionInfo.json" />
+    <Content Include="Resources\Texts\DepartmentInfo.json" />
     <Content Include="Resources\StringConstants.json" />
     <Content Include="Resources\Metainfo.json" />
+    <Content Include="Resources\Texts\ClubIntroduction.json" />
     <None Include="Properties\PublishProfiles\NJUMSCBot - Web Deploy.pubxml" />
-    <Content Include="Resources\ClubIntroduction.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -158,6 +160,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
