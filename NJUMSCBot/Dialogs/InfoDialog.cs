@@ -98,12 +98,8 @@ namespace NJUMSCBot.Dialogs
                 }
                 else
                 {
-                    foreach(var pair in info.Previous)
-                    {
-                        await context.PostAsync($"{pair.Key}: [点击查看微信推送]({pair.Value})");
-
-                    }
-                    await Reply(context, "那是全部了。");
+                    string content = string.Join("\n\n", info.Previous.Select(x => $"{x.Key}: [点击查看微信推送]({x.Value}"));
+                    await Reply(context, content);
                 }
                 context.Wait(AfterEnterFurtherInformation);
                 return;

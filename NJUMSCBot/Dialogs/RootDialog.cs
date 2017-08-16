@@ -144,44 +144,22 @@ namespace NJUMSCBot.Dialogs
 
         public async Task Reply(IDialogContext context, string text)
         {
-            string[] splitedText = text.Split('\n');
-
-            for(int i = 0; i < splitedText.Length - 1; i++)
-            {
-                await context.PostAsync(splitedText[i]);
-            }
-
-
             IMessageActivity message = context.MakeMessage();
+            var actions = Constants.Operations.Select(x => new CardAction() { Title = x.Key, Value = x.Value }).ToList();
             message.SuggestedActions = new SuggestedActions()
             {
-                Actions = new List<CardAction>() {
-                    new CardAction(){ Title = Constants.OperationsIndexes.ClubIntroduction, Value = Constants.Operations.ClubIntroduction},
-                    new CardAction(){ Title = Constants.OperationsIndexes.Activities, Value =Constants.Operations.Activities},
-                    new CardAction(){ Title = Constants.OperationsIndexes.Benefits, Value = Constants.Operations.Benefits},
-                    new CardAction(){ Title = Constants.OperationsIndexes.Competitions, Value = Constants.Operations.Competitions},
-                    new CardAction(){ Title = Constants.OperationsIndexes.Departments, Value = Constants.Operations.Departments},
-                    new CardAction(){ Title = Constants.OperationsIndexes.Joining, Value = Constants.Operations.Joining},
-                    new CardAction(){ Title = Constants.OperationsIndexes.Help, Value = Constants.Operations.Help},
-                }
+                Actions = actions
             };
-            message.Text = splitedText.Last();
+            message.Text = text;
             await context.PostAsync(message);
         }
 
         public async Task Reply(IDialogContext context, IMessageActivity reply)
         {
+            var actions = Constants.Operations.Select(x => new CardAction() { Title = x.Key, Value = x.Value }).ToList();
             reply.SuggestedActions = new SuggestedActions()
             {
-                Actions = new List<CardAction>() {
-                    new CardAction(){ Title = Constants.OperationsIndexes.ClubIntroduction, Value = Constants.Operations.ClubIntroduction},
-                    new CardAction(){ Title = Constants.OperationsIndexes.Activities, Value =Constants.Operations.Activities},
-                    new CardAction(){ Title = Constants.OperationsIndexes.Benefits, Value = Constants.Operations.Benefits},
-                    new CardAction(){ Title = Constants.OperationsIndexes.Competitions, Value = Constants.Operations.Competitions},
-                    new CardAction(){ Title = Constants.OperationsIndexes.Departments, Value = Constants.Operations.Departments},
-                    new CardAction(){ Title = Constants.OperationsIndexes.Joining, Value = Constants.Operations.Joining},
-                    new CardAction(){ Title = Constants.OperationsIndexes.Help, Value = Constants.Operations.Help},
-                }
+                Actions = actions
             };
             await context.PostAsync(reply);
         }

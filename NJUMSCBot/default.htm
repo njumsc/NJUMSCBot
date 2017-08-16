@@ -3,11 +3,22 @@
 <html>
 <head>
     <title>NJU MSC Bot</title>
+    <style>
+        .panel {
+            flex-grow: 1;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
     <meta charset="utf-8" />
 </head>
+    
 <body style="font-family:'Segoe UI'">
-    <iframe name="myframe" scrolling="auto" width="100%" height="100%"
-            onload="document.all['myframe'].style.height=myframe.document.body.scrollHeight"
-            src="https://webchat.botframework.com/embed/njumscbot?s=wFKfTKGwxms.cwA.px8.h576nVQn1ItuCTny8CJ6rDhjfQk4xtlKdEw4LZRHmN0" style="height: 502px; max-height: 502px;"></iframe>
+    <div>
+        <iframe name="myframe" class="panel" scrolling="auto"
+        onload="document.all['myframe'].style.height=myframe.document.body.scrollHeight"
+        src="https://webchat.botframework.com/embed/njumscbot?s=wFKfTKGwxms.cwA.px8.h576nVQn1ItuCTny8CJ6rDhjfQk4xtlKdEw4LZRHmN0" style="height: 502px; max-height: 502px;"></iframe>
+    </div>
 </body>
 </html>

@@ -10,8 +10,7 @@ namespace NJUMSCBot.Models
     public class StringConstants
     {
         public string Welcome { get; set; }
-        public Operations OperationsIndexes { get; set; }
-        public Operations Operations { get; set; }
+        public Dictionary<string, string> Operations { get; set; }
 
         public string UnknownIntent { get; set; }
 
