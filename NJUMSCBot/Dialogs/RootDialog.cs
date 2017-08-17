@@ -10,6 +10,11 @@ using NJUMSCBot.Models;
 using System.Threading;
 using Newtonsoft.Json;
 using static NJUMSCBot.Data.Data;
+using System.Net;
+using System.IO;
+using System.Text;
+using System.Collections.Specialized;
+using System.Net.Http;
 
 namespace NJUMSCBot.Dialogs
 {
@@ -18,10 +23,26 @@ namespace NJUMSCBot.Dialogs
     [LuisModel("204f9894-2f57-4c7d-889f-31f2df44f0f3", "ccad6263e2cd434bab371a2562823097")]
     public class RootDialog : LuisDialog<object>
     {
+        public static HttpClient client = new HttpClient();
+        public static string qnamakerURL = @"https://westus.api.cognitive.microsoft.com/qnamaker/v2.0/knowledgebases/e1e55b5c-d3c3-47a6-8b5a-cb7fc5452123/generateAnswer";
+        static RootDialog()
+        {
+            client.BaseAddress = new Uri(qnamakerURL);
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "0b70551957a548d7b0c52c84270b305d");
+        }
 
         [LuisIntent("None")]
         public async Task None(IDialogContext context, LuisResult result)
         {
+            string text = result.Query;
+            WebClient w = new WebClient();
+
+
+
+            var s = await client.PostAsJsonAsync(qnamakerURL, new { question = text, top = 1 });
+            var answer = JsonConvert.DeserializeObject<QnAResponse>(await s.Content.ReadAsStringAsync());
+            await Reply(context, answer.Answers.First().Answer);
+
             string message = Constants.UnknownIntent;
             await Reply(context, message);
             context.Wait(MessageReceived);
@@ -51,7 +72,7 @@ namespace NJUMSCBot.Dialogs
             {
                 replied = true;
                 string department = entity.Entity;
-                await Reply(context, DepartmentInfo.Items.FirstOrDefault(x => x.Name == department).Description ?? DepartmentInfo.NotExist);
+                await Reply(context, DepartmentInfo.Items.FirstOrDefault(x => x.Name == department).ToString() ?? DepartmentInfo.NotExist);
             }
             if (result.TryFindEntity("名字::比赛", out entity))
             {
@@ -71,7 +92,7 @@ namespace NJUMSCBot.Dialogs
                 string benefit = entity.Entity;
                 await Reply(context, BenefitInfo.Items.FirstOrDefault(x => x.Name == benefit).Description ?? BenefitInfo.NotExist);
             }
-            if (result.TryFindEntity("名字::俱乐部",out entity))
+            if (result.TryFindEntity("名字::俱乐部", out entity))
             {
                 replied = true;
                 await Reply(context, ClubIntro.ToString());
@@ -88,7 +109,7 @@ namespace NJUMSCBot.Dialogs
         public async Task QueryDepartment(IDialogContext context, LuisResult result)
         {
             context.Call(new InfoDialog<Department>(DepartmentInfo), QueryDialogResumeAfter);
-            
+
         }
 
         public async Task QueryDialogResumeAfter(IDialogContext context, IAwaitable<object> argument)

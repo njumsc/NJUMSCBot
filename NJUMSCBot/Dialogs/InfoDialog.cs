@@ -106,6 +106,8 @@ namespace NJUMSCBot.Dialogs
 
             }
 
+            
+
             bool output = false;
             foreach (T d in items)
             {
@@ -113,6 +115,10 @@ namespace NJUMSCBot.Dialogs
                 {
                     output = true;
                     await Reply(context, d.Description);
+                    if (d.ReadMoreUrl != null)
+                    {
+                        await Reply(context, $"点[这里]({d.ReadMoreUrl})知道更多有关{d.Name}的信息！！");
+                    }
                 }
             }
             if (!output)

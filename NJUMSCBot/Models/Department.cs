@@ -13,7 +13,7 @@ namespace NJUMSCBot.Models
 
         public override string ToString()
         {
-            return $"{Description}\n目前部长是{President}，副部长是{VicePresident}";
+            return $"{Description}\n\n目前部长是{President}，副部长是{VicePresident}。";
         }
 
     }

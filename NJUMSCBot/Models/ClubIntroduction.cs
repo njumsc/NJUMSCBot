@@ -17,7 +17,7 @@ namespace NJUMSCBot.Models
 
         public override string ToString()
         {
-            return $"{Introduction}\n我们的官网是{Website}";
+            return $"{Introduction}";
         }
     }
 }
