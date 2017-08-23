@@ -12,7 +12,7 @@ namespace NJUMSCBot.Models
     [Serializable]
     public class Item
     {
-        public string Name { get; set; }
+        public string[] Names { get; set; } // first one is the formal one
         public string Description { get; set; }
         public string ReadMoreUrl { get; set; }
     }

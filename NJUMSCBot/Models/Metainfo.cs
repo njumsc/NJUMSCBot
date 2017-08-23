@@ -14,7 +14,7 @@ namespace NJUMSCBot.Models
 
         public override string ToString()
         {
-            return $"last updated on {UpdateTime}. Join our development on {Github}!";
+            return $"Last updated on {UpdateTime}. Join our development on {Github}!";
         }
     }
 }

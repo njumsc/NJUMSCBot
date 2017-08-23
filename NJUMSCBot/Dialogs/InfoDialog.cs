@@ -29,8 +29,8 @@ namespace NJUMSCBot.Dialogs
 
             actions.AddRange(items.Select(x => new CardAction()
             {
-                Value = x.Name,
-                Title = x.Name
+                Value = x.Names.First(),
+                Title = x.Names.First()
             }));
 
             actions.Add(new CardAction()
@@ -73,7 +73,6 @@ namespace NJUMSCBot.Dialogs
         public async Task AfterEnterFurtherInformation(IDialogContext context, IAwaitable<IMessageActivity> argument)
         {
             var message = (await argument).Text;
-
             if (message == "全部")
             {
                 foreach (T d in items)
@@ -98,7 +97,7 @@ namespace NJUMSCBot.Dialogs
                 }
                 else
                 {
-                    string content = string.Join("\n\n", info.Previous.Select(x => $"{x.Key}: [点击查看微信推送]({x.Value}"));
+                    string content = string.Join("\n\n", info.Previous.Select(x => $"{x.Key}: [点击查看微信推送]({x.Value})"));
                     await Reply(context, content);
                 }
                 context.Wait(AfterEnterFurtherInformation);
@@ -111,13 +110,13 @@ namespace NJUMSCBot.Dialogs
             bool output = false;
             foreach (T d in items)
             {
-                if (message.Contains(d.Name))
+                if (message.Contains(d.Names.First()))
                 {
                     output = true;
                     await Reply(context, d.Description);
                     if (d.ReadMoreUrl != null)
                     {
-                        await Reply(context, $"点[这里]({d.ReadMoreUrl})知道更多有关{d.Name}的信息！！");
+                        await Reply(context, $"点[这里]({d.ReadMoreUrl})知道更多有关{d.Names.First()}的信息！！");
                     }
                 }
             }

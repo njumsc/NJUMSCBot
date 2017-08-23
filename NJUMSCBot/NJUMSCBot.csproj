@@ -23,6 +23,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -113,10 +114,11 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Data\Data.cs" />
     <Compile Include="Dialogs\InfoDialog.cs" />
+    <Compile Include="Dialogs\QnADialog.cs" />
     <Compile Include="Models\ClubIntroduction.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Models\Department.cs" />
-    <Compile Include="Dialogs\RootDialog.cs" />
+    <Compile Include="Dialogs\LuisDialog.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
