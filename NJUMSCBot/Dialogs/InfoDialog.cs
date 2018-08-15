@@ -30,13 +30,15 @@ namespace NJUMSCBot.Dialogs
             actions.AddRange(items.Select(x => new CardAction()
             {
                 Value = x.Names.First(),
-                Title = x.Names.First()
+                Title = x.Names.First(),
+                Type = ActionTypes.ImBack
             }));
 
             actions.Add(new CardAction()
             {
                 Value = "全部",
-                Title = "全部"
+                Title = "全部",
+                Type = ActionTypes.ImBack
             });
 
 
@@ -45,14 +47,16 @@ namespace NJUMSCBot.Dialogs
                 actions.Add(new CardAction()
                 {
                     Value = "以往的",
-                    Title = "以往的活动"
+                    Title = "以往的活动",
+                    Type = ActionTypes.ImBack
                 });
             }
 
             actions.Add(new CardAction()
             {
                 Value = "返回",
-                Title = "返回"
+                Title = "返回",
+                Type = ActionTypes.ImBack
             });
 
 
@@ -69,6 +73,15 @@ namespace NJUMSCBot.Dialogs
             context.Wait(AfterEnterFurtherInformation);
         }
 
+        private async Task ReplyAnInfoAsync(IDialogContext context, T info)
+        {
+            await Reply(context, info.Description);
+            if (info.ReadMoreUrl != null)
+            {
+                await Reply(context, $"点[这里]({info.ReadMoreUrl})知道更多有关{info.Names.First()}的信息！！");
+            }
+        }
+
 
         public async Task AfterEnterFurtherInformation(IDialogContext context, IAwaitable<IMessageActivity> argument)
         {
@@ -77,7 +90,7 @@ namespace NJUMSCBot.Dialogs
             {
                 foreach (T d in items)
                 {
-                    await Reply(context, d.Description);
+                    await ReplyAnInfoAsync(context, d);
                 }
                 context.Wait(AfterEnterFurtherInformation);
                 return;
@@ -105,19 +118,14 @@ namespace NJUMSCBot.Dialogs
 
             }
 
-            
-
             bool output = false;
             foreach (T d in items)
             {
-                if (message.Contains(d.Names.First()))
+                var realName = d.Names.First();
+                if (message.Contains(realName))
                 {
                     output = true;
-                    await Reply(context, d.Description);
-                    if (d.ReadMoreUrl != null)
-                    {
-                        await Reply(context, $"点[这里]({d.ReadMoreUrl})知道更多有关{d.Names.First()}的信息！！");
-                    }
+                    await ReplyAnInfoAsync(context, d);
                 }
             }
             if (!output)

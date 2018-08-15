@@ -4,7 +4,15 @@
   "items": [
     {
       "names": [ "技术沙龙", "技术讲座" ],
-      "description": "南京大学微软俱乐部会定期举办技术沙龙，我们将邀请高年级有声望的学长学姐与大家分享一些大家感兴趣的技术问题，并以讲座+互动的形式举行。去年举办过的部分讲座有：机器学习基础，Microsoft Cognitive Service，如何科学上网（翻墙），C#基础，STL的使用等。"
+      "description": "南京大学微软俱乐部会定期举办技术沙龙，我们将邀请高年级有声望的学长学姐与大家分享一些大家感兴趣的技术问题，并以讲座+互动的形式举行。去年举办过的部分讲座有：机器学习基础，Microsoft Cognitive Service，如何科学上网（翻墙）等。"
+    },
+    {
+      "names": [ "MR体验活动", "MR" ],
+      "description": "2018年，南大微俱购入了MR设备并开放给俱乐部内部成员体验，在5月20日校庆日晚开放给全校同学体验，收到了很好的效果。据评价，这是一款“一度曾经让某些俱乐部成员沉迷与空气搏斗无法自拔甚至扬言与抢夺者以死相搏的科（you）技（xi）设备，亲测令人不能自拔，无法fu吸。”"
+    },
+    {
+      "names": [ "参观微软苏州", "参观微软", "微软苏州" ],
+      "description": "微软学生俱乐部和微软保持着紧密的交流。2018年7月4日，南京四校微俱学生俱乐部成员一起去微软苏州参观，参观了微软苏州的大佬，还和微软的dalao进行了交流。"
     },
     {
       "names": [ "微软校园行", "校园行" ],
@@ -13,6 +21,10 @@
   ],
   "previous": {
     "2016hackathon启程": "http://mp.weixin.qq.com/s?__biz=MzAxODAzMzczMg==&mid=2659244018&idx=1&sn=edad4055b95eb0e203fd99d06c12f06e&chksm=80a80ad9b7df83cf4d61e0b2eed1c0726113194e4da702b2908909b0bab4df0d50e1303f0b57&mpshare=1&scene=23&srcid=0816dNlN5OBdKNlj5DibWHGy#rd",
-    "2016hackathon结束": "http://mp.weixin.qq.com/s?__biz=MzAxODAzMzczMg==&mid=2659244039&idx=1&sn=8137f89e529ae26d8d493015e9054253&chksm=80a8052cb7df8c3a44610eb0edcafff472fa4097214b41cd178449ad2668355b9d79245d4f0b&mpshare=1&scene=23&srcid=0816Xt7fSwObwYDo3YLXRBTy#rd"
+    "2016hackathon结束": "http://mp.weixin.qq.com/s?__biz=MzAxODAzMzczMg==&mid=2659244039&idx=1&sn=8137f89e529ae26d8d493015e9054253&chksm=80a8052cb7df8c3a44610eb0edcafff472fa4097214b41cd178449ad2668355b9d79245d4f0b&mpshare=1&scene=23&srcid=0816Xt7fSwObwYDo3YLXRBTy#rd",
+    "2017南京四校hackathon活动Hack.Chrismas介绍": "http://mp.weixin.qq.com/s?__biz=MzAxODAzMzczMg==&mid=2659244121&idx=1&sn=1663a6ae0c1e43a1e54fe141b4b3fa3a&chksm=80a80572b7df8c649825e8877c4d5e28fc86ae289dd618abb0f207ecd08a57846fdb7b1faa98&mpshare=1&scene=23&srcid=0701rt5FX5bMBO6EH2KmVTMk#rd",
+    "Hack.Chrismas总结": "https://mp.weixin.qq.com/s?__biz=MzA4MDczMjcwMQ==&mid=2664479399&idx=1&sn=17ce7b81f7ee4354fe5a9034a396adfb&chksm=84bbadd5b3cc24c3ef1cfdc49c7141d5bb70ecc385b18c90d82bc272c3d1f9b95a37420409ce&mpshare=1&scene=23&srcid=0701wXq3NNMvYmvCCUf0DsR8#rd",
+    "MR体验活动": "https://studentclub.msra.cn/club-event/116",
+    "参观微软苏州": "https://studentclub.msra.cn/club-event/111"
   }
 }

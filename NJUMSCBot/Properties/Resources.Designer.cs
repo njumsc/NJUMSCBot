@@ -19,7 +19,7 @@ namespace NJUMSCBot.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -62,21 +62,17 @@ namespace NJUMSCBot.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;introduction&quot;: &quot;俱乐部会对组员提供很多福利。&quot;,
+        ///  &quot;introduction&quot;: &quot;俱乐部会对组员提供很多福利，例如“明日之星”实习生计划，微软“校园菁英计划”以及微软学生夏令营。&quot;,
         ///  &quot;notExist&quot;: &quot;我们好像没有这个福利……&quot;,
         ///  &quot;items&quot;: [
         ///    {
-        ///      &quot;name&quot;: &quot;“明日之星”实习生计划&quot;,
+        ///      &quot;names&quot;: [ &quot;“明日之星”实习生计划&quot;, &quot;明日之星&quot; ],
         ///      &quot;description&quot;: &quot;微软亚洲研究院应该是所有计算机人才梦寐以求的实习/工作机会，微软学生俱乐部的优秀部员将可以通过俱乐部绿色通道，略去简历筛选过程，你的简历可以直接到达导师手中。&quot;,
         ///      &quot;readMoreUrl&quot;: &quot;http://www.msra.cn/zh-cn/connections/academic-programs/tomorrowstars&quot;
         ///    },
         ///    {
-        ///      &quot;name&quot;: &quot;微软“校园菁英计划”&quot;,
-        ///      &quot;description&quot;: &quot;微软校园菁英计划是针对有好的想法却缺少工具，指导和资金的大学生团队。校园菁英计划的目的不同于比赛，菁英计划希望能给尽可能多的学生项目团队支持，并且不求回报。&quot;
-        ///    },
-        ///    {
-        ///      &quot;name&quot;: &quot;微软夏令营&quot;,
-        ///       [rest of string was truncated]&quot;;.
+        ///      &quot;names&quot;: [ &quot;微软“校园菁英计划”&quot;, &quot;校园菁英计划&quot;, &quot;校园菁英&quot; ],
+        ///      &quot;description&quot;: &quot;微软校园菁英计划是针对有好的想法却缺少工具，指导和资金的大学生团队。校园菁英计划的目的不同于比赛，菁英计划希望能 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string BenefitInfo {
             get {
@@ -86,20 +82,18 @@ namespace NJUMSCBot.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;introduction&quot;: &quot;我们每年会举办很多活动。&quot;,
+        ///  &quot;introduction&quot;: &quot;我们每年会举办很多活动，例如技术沙龙，微软校园行等。&quot;,
         ///  &quot;notExist&quot;: &quot;我们貌似没有这个活动……&quot;,
         ///  &quot;items&quot;: [
         ///    {
-        ///      &quot;name&quot;: &quot;技术沙龙&quot;,
-        ///      &quot;description&quot;: &quot;南京大学微软俱乐部会定期举办技术沙龙，我们将邀请高年级有声望的学长学姐与大家分享一些大家感兴趣的技术问题，并以讲座+互动的形式举行。去年举办过的部分讲座有：机器学习基础，Microsoft Cognitive Service，如何科学上网（翻墙），C#基础，STL的使用等。&quot;
+        ///      &quot;names&quot;: [ &quot;技术沙龙&quot;, &quot;技术讲座&quot; ],
+        ///      &quot;description&quot;: &quot;南京大学微软俱乐部会定期举办技术沙龙，我们将邀请高年级有声望的学长学姐与大家分享一些大家感兴趣的技术问题，并以讲座+互动的形式举行。去年举办过的部分讲座有：机器学习基础，Microsoft Cognitive Service，如何科学上网（翻墙）等。&quot;
         ///    },
         ///    {
-        ///      &quot;name&quot;: &quot;微软校园行&quot;,
-        ///      &quot;description&quot;: &quot;微软亚洲研究院副院长芮勇博士亲自来校举办讲座的活动，每次的主题都是最前沿的技术，但是讲的生动有趣，每年都是爆满，作为南大微软俱乐部的成员，可以有VIP座位并且亲自和芮勇博士交流的机会。&quot;
-        ///    }
-        ///  ],
-        ///  &quot;previous&quot;: {
-        ///    &quot;2016hackathon启程&quot;: &quot;http://mp.weixin.qq.com/s?_ [rest of string was truncated]&quot;;.
+        ///      &quot;names&quot;: [ &quot;MR体验活动&quot;, &quot;MR&quot; ],
+        ///      &quot;description&quot;: &quot;2018年，南大微俱购入了MR设备并开放给俱乐部内部成员体验，在5月20日校庆日晚开放给全校同学体验，收到了很好的效果。据评价，这是一款“一度曾经让某些俱乐部成员沉迷与空气搏斗无法自拔甚至扬言与抢夺者以死相搏的科（you）技（xi）设备，亲测令人不能自拔，无法fu吸。”&quot;
+        ///    },
+        ///    [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ClubActivityInfo {
             get {
@@ -109,10 +103,10 @@ namespace NJUMSCBot.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;introduction&quot;: &quot;微软学生俱乐部是微软亚洲研究院(Microsoft Research Asia)下属的学生俱乐部，在全国有包括清华，北大，港科大，台大，复旦，交大，浙大，南大等32所一流高校都有各自的微软俱乐部，这里集中了中国最优秀的计算机人才，有着世界最大的IT公司微软公司和亚洲最顶级的研究院微软亚洲研究院的直接支持（均没有之一）。所有的开销和物资全部由微软亚洲研究院提供，社团完全免费，且不需要依赖外联或者学校经费。我们就是壕！&quot;,
+        ///  &quot;introduction&quot;: &quot;微软学生俱乐部（Microsoft Student Club）是微软亚洲研究院(Microsoft Research Asia, MSRA)下属的学生俱乐部，由MSRA直接提供资金和运营支持。在全国，包括清华，北大，港科大，南大在内的34所一流高校都有各自的微软俱乐部。微软学生俱乐部的创立，是微软亚洲研究院与高校合作培养人才的一种探索。自 2000 年 10 月 15 日第一个俱乐部在四川大学成立起，至今全国已有34所高校拥有了自己的 MSC。俱乐部本着“学习先进技术，开拓创新思维，体验多元文化，成就一流人才”的宗旨，在各高校校团委、相关学院的指导下，通过学生项目、线上微课、产品体验、技术沙龙、学生大赛等活动，培养部员的创新头脑、实践能力和组织能力，让来自不同领域的同学得以展现才华，共同成长。&quot;,
+        ///  &quot;\&quot;,&quot;: null,
         ///  &quot;website&quot;: &quot;http://studentclub.msra.cn/&quot;,
-        ///  &quot;groupImage&quot;: &quot;http://wx4.sinaimg.cn/mw690/0067ExyHly1fikx1cbjx5j30f00kkgmk.jpg&quot;
-        ///}.
+        ///  &quot;groupImage&quot;: &quot;https://wx2.sinaimg.cn/mw690/9e4c3c1bgy1fuai8j4oktj20f00k [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ClubIntroduction {
             get {
@@ -122,18 +116,12 @@ namespace NJUMSCBot.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;introduction&quot;: &quot;大家可以参加俱乐部以及MSRA举办的各种活动来认识大佬一起学习。&quot;,
+        ///  &quot;introduction&quot;: &quot;大家可以参加俱乐部以及MSRA举办的各种活动来认识大佬一起学习，每年我们都有微软创新杯（Imagine Cup），微软hackathon，编程之美挑战赛。&quot;,
         ///  &quot;notExist&quot;: &quot;我们貌似没有这个比赛……&quot;,
         ///  &quot;items&quot;: [
         ///    {
-        ///      &quot;name&quot;: &quot;微软创新杯&quot;,
-        ///      &quot;description&quot;: &quot;全球规模最大的学生科技比赛（没有之一）每年有超过65个国家和地区的学生参与比赛。在中国已经举办了13年，有22万学生参加比赛。&quot;
-        ///    },
-        ///    {
-        ///      &quot;name&quot;: &quot;微软hackathon&quot;,
-        ///      &quot;description&quot;: &quot;Hackathon，中文名黑客松，昵称黑马，小名松松(黑人问号？)，是一群程序猿聚众coding，以合作形式形成某个项目的活动。在Hackathon启动前会限定主题和大方向，各个团队根据这个大方向以团队形式合作coding，在限时内形成自己的项目，最后进行展示与评比。它的灵魂是合作地编写程序和应用。时长一般在几天到一周不等。\n\n南京大学承办了2016年的南京四校hackathon活动，详细活动详情可以查看往期推送。&quot;
-        ///    },
-        ///  [rest of string was truncated]&quot;;.
+        ///      &quot;names&quot;: [ &quot;微软校园hackathon&quot;, &quot;黑客马拉松&quot;, &quot;黑客松&quot;, &quot;微软hackathon&quot;, &quot;hackathon&quot; ],
+        ///      &quot;description&quot;: &quot;Hackathon，中文名黑客松，昵称黑马，小名松松(黑人问号？)，是一群程序猿聚众coding，以合作形式形成某个项目的活动。在Hackathon启动前会限定主题和大方向，各个团队根据这个大方向以团队形式合作coding，在限时内形成自己的项目，最后进行展示与评比。它的灵魂是合作地编写程序和应用。时长一般在几天到一周不等。\n\n在南京，由南京大学、东南大学、南京理工大学、南京航空航天大学微软学生俱乐部共同举办的南京四校hackathon到2017年12月已经举办了三届，人数和影响力逐年增加，2017 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string CompetitionInfo {
             get {
@@ -147,20 +135,18 @@ namespace NJUMSCBot.Properties {
         ///  &quot;notExist&quot;: &quot;我们好像没有这个部门……我们有组织部，宣传部和技术部。&quot;,
         ///  &quot;items&quot;: [
         ///    {
-        ///      &quot;name&quot;: &quot;技术部&quot;,
-        ///      &quot;description&quot;: &quot;技术部是微软俱乐部的一个重要部门，主要负责和技术有关的活动，比如举办学术讲座，做宣传海报等。&quot;,
-        ///      &quot;president&quot;: &quot;软院 王宁一&quot;,
-        ///      &quot;vicePresident&quot;: &quot;软院 陈俊达，物院 王臻郅&quot;
+        ///      &quot;names&quot;: [ &quot;技术部&quot; ],
+        ///      &quot;description&quot;: &quot;技术部主要负责和技术有关的活动，比如举办技术讲座，组织技术活动等。这也是平时主要为大家提供福利的部门。刚过去的一年里，技术部的多位dalao就“科学上网”（doge）和机器学习进行过讲座，干货满满哟~&quot;,
+        ///      &quot;president&quot;: &quot;计科 谢乃容&quot;,
+        ///      &quot;vicePresident&quot;: &quot;计科 吴秉乐&quot;
         ///    },
         ///    {
-        ///      &quot;name&quot;: &quot;活动部&quot;,
-        ///      &quot;description&quot;: &quot;活动部是微软俱乐部的一个重要部门，主要负责策划和承办各式各样的活动，比如策划新部员的破冰活动，承办南京地区hackthon大赛等。&quot;,
-        ///      &quot;president&quot;: &quot;计科 吴昌容&quot;,
-        ///      &quot;vicePresident&quot;: &quot;软院 高毓彬 &quot;
+        ///      &quot;names&quot;: [ &quot;活动部&quot; ],
+        ///      &quot;description&quot;: &quot;活动部主要负责策划和承办各式各样的活动，比如策划新部员的破冰活动等。&quot;,
+        ///      &quot;president&quot;: &quot;软院 徐璜林&quot;,
+        ///      &quot;vicePresident&quot;: &quot;计科 王月涵&quot;
         ///    },
-        ///    {
-        ///      &quot;name&quot;: &quot;宣传部&quot;,
-        ///   [rest of string was truncated]&quot;;.
+        ///    {        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string DepartmentInfo {
             get {
@@ -170,7 +156,7 @@ namespace NJUMSCBot.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;updatedTime&quot;: &quot;2017-8-11&quot;,
+        ///  &quot;updatedTime&quot;: &quot;2018-8-15&quot;,
         ///  &quot;github&quot;: &quot;https://github.com/njumsc/NJUMSCBot&quot;
         ///}.
         /// </summary>
@@ -195,7 +181,7 @@ namespace NJUMSCBot.Properties {
         ///  },
         ///  &quot;help&quot;: &quot;目前，你可以用自然语言问我关于俱乐部的招新、比赛、活动、部门等信息，以后我们的还会继续增加功能！&quot;,
         ///  &quot;metainfo&quot;: &quot;元数据&quot;,
-        ///  &quot;joining&quot;: &quot;欢迎加入QQ群573920749。具体迎新步骤我们将随时更新，欢迎持续关注！&quot;
+        ///  &quot;joining&quot;: &quot;欢迎加入QQ群527635833。具体迎新步骤我们将随时更新，欢迎持续关注！&quot;
         ///}.
         /// </summary>
         internal static string StringConstants {

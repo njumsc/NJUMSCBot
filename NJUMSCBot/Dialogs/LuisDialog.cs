@@ -158,18 +158,19 @@ namespace NJUMSCBot.Dialogs
         public async static Task ReplyAsync(IDialogContext context, string text)
         {
             IMessageActivity message = context.MakeMessage();
-            var actions = Constants.Operations.Select(x => new CardAction() { Title = x.Key, Value = x.Value }).ToList();
-            message.SuggestedActions = new SuggestedActions()
-            {
-                Actions = actions
-            };
             message.Text = text;
-            await context.PostAsync(message);
+            await ReplyAsync(context, message);
         }
 
         public async static Task ReplyAsync(IDialogContext context, IMessageActivity reply)
         {
-            var actions = Constants.Operations.Select(x => new CardAction() { Title = x.Key, Value = x.Value }).ToList();
+            var actions = Constants.Operations.Select(
+                x => new CardAction() {
+                    Title = x.Key,
+                    Value = x.Value,
+                    Type = ActionTypes.ImBack
+                })
+                .ToList();
             reply.SuggestedActions = new SuggestedActions()
             {
                 Actions = actions

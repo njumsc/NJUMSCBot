@@ -1,23 +1,27 @@
 ﻿{
-  "introduction": "大家可以参加俱乐部以及MSRA举办的各种活动来认识大佬一起学习，每年我们都有微软创新杯（Imagine Cup），微软hackathon，编程之美挑战赛。",
+  "introduction": "大家可以参加俱乐部以及MSRA举办的各种活动来认识大佬一起学习，每年我们都有微软创新杯（Imagine Cup），hackathon，编程之美挑战赛等",
   "notExist": "我们貌似没有这个比赛……",
   "items": [
     {
-      "names": [ "微软创新杯","Imagine Cup", "创新杯" ],
-      "description": "微软创新杯是全球规模最大的学生科技比赛（没有之一）。每年有超过65个国家和地区的学生参与比赛。在中国已经举办了13年，有22万学生参加比赛。"
+      "names": [ "微软校园hackathon", "黑客马拉松", "黑客松", "微软hackathon", "hackathon" ],
+      "description": "Hackathon，中文名黑客松，昵称黑马，小名松松(黑人问号？)，是一群程序猿聚众coding，以合作形式形成某个项目的活动。在Hackathon启动前会限定主题和大方向，各个团队根据这个大方向以团队形式合作coding，在限时内形成自己的项目，最后进行展示与评比。它的灵魂是合作地编写程序和应用。时长一般在几天到一周不等。\n\n在南京，由南京大学、东南大学、南京理工大学、南京航空航天大学微软学生俱乐部共同举办的南京四校hackathon到2017年12月已经举办了三届，人数和影响力逐年增加，2017年的参加人次已达到100余人。南京大学承办了2016年的南京四校hackathon活动，详细活动详情可以查看往期推送。"
     },
     {
-      "names": [ "微软校园hackathon","黑客马拉松","黑客松","微软hackathon","hackathon" ],
-      "description": "Hackathon，中文名黑客松，昵称黑马，小名松松(黑人问号？)，是一群程序猿聚众coding，以合作形式形成某个项目的活动。在Hackathon启动前会限定主题和大方向，各个团队根据这个大方向以团队形式合作coding，在限时内形成自己的项目，最后进行展示与评比。它的灵魂是合作地编写程序和应用。时长一般在几天到一周不等。\n\n南京大学承办了2016年的南京四校hackathon活动，详细活动详情可以查看往期推送。"
+      "names": [ "编程之美挑战赛", "bop", "BOP", "Beauty of Programming", "编程之美" ],
+      "description": "编程之美挑战赛（Beauty of Programming）是微软和IEEE联合举办的、面向学生开展的大型编程比赛，自2012年以来已成功举办了五届比赛。它致力于帮助学生了解、运用先进的算法与编程设计解决当今热点问题，并通过比赛加强他们在协作、沟通等方面的软实力，从而提高青年开发者的综合实践能力，现已成为以解决挑战性问题为目标的代码高手切磋交流及实现梦想的平台。",
+      "readMoreUrl": "https://studentclub.msra.cn/bop2017/"
     },
     {
-      "names": [ "编程之美挑战赛", "bop", "BOP", "Beauty of Programming" ],
-      "description": "编程之美挑战赛（Beauty of Programming）是微软和IEEE联合举办的、面向学生开展的大型编程比赛，自2012年以来已成功举办了五届比赛。它致力于帮助学生了解、运用先进的算法与编程设计解决当今热点问题，并通过比赛加强他们在协作、沟通等方面的软实力，从而提高青年开发者的综合实践能力，现已成为以解决挑战性问题为目标的代码高手切磋交流及实现梦想的平台。"
+      "names": [ "微软创新杯", "Imagine Cup", "创新杯" ],
+      "description": "微软创新杯是全球规模最大的学生科技比赛（没有之一）。每年有超过65个国家和地区的学生参与比赛。在中国已经举办了13年，有22万学生参加比赛。",
+      "readMoreUrl": "https://imaginecup.microsoft.com/"
     }
   ],
   "previous": {
     "2016南京四校hackathon启程": "http://mp.weixin.qq.com/s?__biz=MzAxODAzMzczMg==&mid=2659244018&idx=1&sn=edad4055b95eb0e203fd99d06c12f06e&chksm=80a80ad9b7df83cf4d61e0b2eed1c0726113194e4da702b2908909b0bab4df0d50e1303f0b57&mpshare=1&scene=23&srcid=0816dNlN5OBdKNlj5DibWHGy#rd",
-    "2016南京四校hackathon完结": "http://mp.weixin.qq.com/s?__biz=MzAxODAzMzczMg==&mid=2659244039&idx=1&sn=8137f89e529ae26d8d493015e9054253&chksm=80a8052cb7df8c3a44610eb0edcafff472fa4097214b41cd178449ad2668355b9d79245d4f0b&mpshare=1&scene=23&srcid=0816Xt7fSwObwYDo3YLXRBTy#rd"
+    "2016南京四校hackathon完结": "http://mp.weixin.qq.com/s?__biz=MzAxODAzMzczMg==&mid=2659244039&idx=1&sn=8137f89e529ae26d8d493015e9054253&chksm=80a8052cb7df8c3a44610eb0edcafff472fa4097214b41cd178449ad2668355b9d79245d4f0b&mpshare=1&scene=23&srcid=0816Xt7fSwObwYDo3YLXRBTy#rd",
+    "2017南京四校hackathon活动Hack.Chrismas介绍": "http://mp.weixin.qq.com/s?__biz=MzAxODAzMzczMg==&mid=2659244121&idx=1&sn=1663a6ae0c1e43a1e54fe141b4b3fa3a&chksm=80a80572b7df8c649825e8877c4d5e28fc86ae289dd618abb0f207ecd08a57846fdb7b1faa98&mpshare=1&scene=23&srcid=0701rt5FX5bMBO6EH2KmVTMk#rd",
+    "2017 Hack.Chrismas总结": "https://mp.weixin.qq.com/s?__biz=MzA4MDczMjcwMQ==&mid=2664479399&idx=1&sn=17ce7b81f7ee4354fe5a9034a396adfb&chksm=84bbadd5b3cc24c3ef1cfdc49c7141d5bb70ecc385b18c90d82bc272c3d1f9b95a37420409ce&mpshare=1&scene=23&srcid=0701wXq3NNMvYmvCCUf0DsR8#rd"
   }
 
 }
